@@ -1,0 +1,11 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Asami Tachibana
+	email = atachibana2612@gmail.com
+[push]
+	default = simple
+[http]
+	postBuffer = 524288000
