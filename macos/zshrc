@@ -2,7 +2,8 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/James/.oh-my-zsh
+export ZSH=/Users/asami/.oh-my-zsh
+export FRTN=/usr/local/Cellar/fortune/9708/share/games/fortunes
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -87,16 +88,26 @@ echo " "
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+
+alias mp3='ncmpcpp'
+alias np='mpc current'
+
 alias ls='ls -Glh'
 alias ls-ext='ls -Ca'
 
-alias clear='clear && fortune | cowsay | lolcat && echo " "'
-alias cls='clear'
+alias clr='clear && fortune | cowsay | lolcat && echo " "'
+alias cls='clr'
 alias neofetch='neofetch --color_blocks on --install_time on'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
-alias psh='zsh ~/.scripts/push.sh | lolcat'
-alias pll='zsh ~/.scripts/pull.sh | lolcat'
+alias psh='zsh ~/.scripts/push.sh'
+alias pll='zsh ~/.scripts/pull.sh'
+
+alias wiki='googler -n 5 -w en.wikipedia.org'
+alias ahgrep='googler -n 5 -w alternatehistory.com'
+
+alias weather='clear && curl wttr.in/tpa'
+alias mond='clear && curl wttr.in/Moon'
