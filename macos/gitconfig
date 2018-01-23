@@ -9,5 +9,3 @@
 	default = simple
 [http]
 	postBuffer = 524288000
-[core]
-	editor = nano
