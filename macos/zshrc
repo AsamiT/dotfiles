@@ -59,7 +59,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 alias lolcat='lolcat -p 1 -f'
-alias clear='clear && fortune | cowsay | lolcat && echo " "'
+alias clear='clear && fortune | cowsay -t | lolcat && echo " "'
 clear
 
 # export MANPATH="/usr/local/man:$MANPATH"
