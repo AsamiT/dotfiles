@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$PATH:/Applications/Geany.app/Contents/MacOS
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/James/.oh-my-zsh
@@ -100,4 +101,5 @@ alias fgrep='fgrep --color=auto'
 
 alias psh='zsh ~/.scripts/push.sh'
 alias pll='zsh ~/.scripts/pull.sh'
+alias docexport='zsh ~/.scripts/docxport.sh $1'
 alias mp3='ncmpcpp'
