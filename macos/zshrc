@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/Applications/Geany.app/Contents/MacOS
+export PATH=/usr/local/sbin:$PATH:/Applications/Geany.app/Contents/MacOS
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/James/.oh-my-zsh
@@ -59,8 +59,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias lolcat='lolcat -p 1 -f'
-alias clear='clear && fortune | cowsay -t | lolcat && echo " "'
+#alias lolcat='lolcat -p 1 -f'
+alias clear='clear && fortune | cowsay -t && echo " "'
 clear
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -92,8 +92,9 @@ clear
 
 alias ls='ls -Glh'
 alias ls-ext='ls -Ca'
+alias gorepo='cd ~/Git\ Repos'
 alias cls='clear'
-alias neofetch='neofetch --ascii_distro windows --color_blocks on --install_time on'
+alias neofetch='neofetch --color_blocks on --install_time on'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
