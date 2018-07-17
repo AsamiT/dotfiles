@@ -8,17 +8,18 @@ echo "This program will set up your Ubuntu-based Linux environment, with an asso
 read -n 1 -s ## wait for keystroke to continue
 echo "First, we'll grab an essential utility, and update the repositories."
 ## Installer for ukuu, a kernel version utility
-echo -n "Installing ukuu..."
+echo "Installing ukuu..."
 apt-add-repository -y ppa:teejee2008/ppa
 apt update
 apt install ukuu
-apt update && apt upgrade
 ## Finish ukuu
-echo " done."
+
+echo "Updating repository and upgrading packages..."
+apt update && apt upgrade ## Finished preloader stuff.
+
 echo "Now, we can install some new programs."
 echo "Remember that when you install a new Linux kernel, you will have to reboot your system!!"
 echo "Press any key to continue."
-## Finished preloader stuff.
 read -n 1 -s ## wait for keystroke to continue
 
 echo "Next, we're going to install some essential programs."
