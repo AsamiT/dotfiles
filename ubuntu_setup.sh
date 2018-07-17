@@ -68,9 +68,9 @@ if ! [ -x "$(command -v ffmpeg)"]; then ##  	ffmpeg
     echo "ffmpeg isn't installed. Let's fix that."
     apt-get -qq install ffmpeg youtube-dl
 fi
-##  Wine
-##  DXVK
-##  Steam
+##  Wine (TBD)
+##  DXVK (TBD)
+##  Steam (TBD)
 if ! [ -x "$(command -v cmus)" ]; then ## cmus, CLI music player
     echo "cmus isn't installed. Let's fix that."
     apt-get -qq install cmus
@@ -79,7 +79,7 @@ if ! [ -x "$(command -v discord)" ]; then ## Discord, chat program
     echo "Discord isn't installed. Let's fix that."
     snap install discord
 fi
-if ! [ -x "$(command -v zsh)" ]; then
+if ! [ -x "$(command -v zsh)" ]; then ##	install zsh, a replacement for bash
     echo "You don't have zsh. Let's fix that."
     apt-get -qq install zsh
 fi
@@ -87,10 +87,11 @@ fi
 #### Doing some configuration work. ###########################
 ###############################################################
 
-if [ -x "$(command -v zsh)" ]; then
+if [ -x "$(command -v zsh)" ]; then ##	install oh-my-zsh!
 	echo "zsh" >> /etc/shells    
 	chsh -s $(which zsh)
 	curl -fsSL 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh'
+	## we're going to add a portion that clones and copies zshrc from my dotfiles git repo to the ~ directory.
 fi
 
 printf "All done!\n"
