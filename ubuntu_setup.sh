@@ -4,7 +4,11 @@ if [[ $UID != 0 ]]; then
     echo "sudo $0 $*"
     exit 1
 fi
-echo "This program will set up your Ubuntu-based Linux environment to your liking, Robin."
+echo "This program will set up your Ubuntu-based Linux environment, with an assortment of utilities you may otherwise not have on a Ubuntu default installation. This will take a few minutes as Ubuntu does it's silly thing, but we'll be back up and running before you know it. Press any key to get started."
+read -n 1 -s
+echo "First, let's get the latest updates and upgrades from the repo..."
+apt update && apt upgrade
+echo "Now, we can install some new programs."
 if ! [ -x "$(command -v neofetch)" ]; then
     echo "Neofetch isn't installed. Installing."
     apt install neofetch
