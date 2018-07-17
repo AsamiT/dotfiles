@@ -19,9 +19,9 @@ fi
 echo "Updating repository and upgrading packages..."
 apt-get -qq update && apt-get -qq upgrade ## Finished preloader stuff.
 
-printf "Now, we can install some new programs.\n"
+printf "########################\nNow, we can install some new programs.\n"
 printf "Remember that when you install a new Linux kernel,\nyou will have to reboot your system!!"
-printf "\n\nPress any key to continue."
+printf "\n\nPress any key to continue.\n########################\n"
 read -n 1 -s ## wait for keystroke to continue
 
 echo "Next, we're going to install some essential programs."
