@@ -79,5 +79,19 @@ if ! [ -x "$(command -v discord)" ]; then ## Discord, chat program
     echo "Discord isn't installed. Let's fix that."
     snap install discord > /dev/null
 fi
+if ! [ -x "$(command -v zsh)" ]; then
+    echo "You don't have zsh. Let's fix that."
+    apt-get -qq install zsh
+fi
+###############################################################
+#### Doing some configuration work. ###########################
+###############################################################
+
+if [ -x "$(command -v zsh)" ]; then
+	echo "zsh" >> /etc/shells    
+	chsh -s $(which zsh)
+	curl -fsSL 'https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh'
+fi
+
 printf "All done!\n"
 exit 0
