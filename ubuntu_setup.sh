@@ -9,24 +9,42 @@ read -n 1 -s
 echo "First, let's get the latest updates and upgrades from the repo..."
 apt update && apt upgrade
 echo "Now, we can install some new programs."
-if ! [ -x "$(command -v neofetch)" ]; then
-    echo "Neofetch isn't installed. Installing."
+## Installer for ukuu, a kernel version utility
+echo "First, we're going to install ukuu, a kernel version utility."
+apt-add-repository -y ppa:teejee2008/ppa
+apt update
+apt install ukuu
+## Finished installing ukuu.
+echo "Next, we're going to install some essential programs."
+if ! [ -x "$(command -v neofetch)" ]; then ##   Neofetch, CLI utility to display system info
+    echo "neofetch isn't installed. Let's fix that."
     apt install neofetch
 fi
-if ! [ -x "$(command -v vlc)" ]; then
-    echo "VLC not installed. Installing..."
+if ! [ -x "$(command -v vlc)" ]; then ##    VLC, media player
+    echo "VLC isn't installed. Let's fix that."
     apt install vlc
 fi
-if ! [ -x "$(command -v git)" ]; then
-    echo "Git not installed. Installing..."
+if ! [ -x "$(command -v git)" ]; then ##    Git, for repository management
+    echo "Git isn't installed. Let's fix that."
     apt install git
 fi
-if ! [ -x "$(command -v snap)" ]; then
+if ! [ -x "$(command -v snap)" ]; then ##   Snap, Ubuntu's new package system.
     echo "You can't install snap packages right now. Let's fix that."
     apt install snapd-xdg-open
 fi
-if ! [ -x "$(command -v discord)" ]; then
+if ! [ -x "$(command -v discord)" ]; then ## Discord, chat program
     echo "Discord isn't installed. Let's fix that."
+    snap install discord
+fi
+##  Telegram
+##  Atom
+##  Geany
+##  Emacs
+##  Wine
+##  DXVK
+##  Steam
+if ! [ -x "$(command -v cmus)" ]; then ## cmus, CLI music player
+    echo "cmus isn't installed. Let's fix that."
     snap install discord
 fi
 printf "All done!"
