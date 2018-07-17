@@ -4,9 +4,9 @@ if [[ $UID != 0 ]]; then
     echo "sudo $0 $*"
     exit 1
 fi
-echo "This program will set up your Ubuntu-based Linux environment, with an assortment of utilities\n you may otherwise not have on a Ubuntu default installation.\n This will take a few minutes as Ubuntu does it's silly thing, but we'll be back up and running before you know it.\n\n Press any key to get started."
+printf "This program will set up your Ubuntu-based Linux environment.\n You'll have an assortment of utilities you may otherwise not have on a Ubuntu default installation.\n This will take a few minutes as Ubuntu does it's silly thing, but we'll be back up and running before you know it.\n\n Press any key to get started."
 read -n 1 -s ## wait for keystroke to continue
-echo "\nFirst, we'll grab an essential utility, and update the repositories."
+echo "First, we'll grab an essential utility, and update the repositories."
 ## Installer for ukuu, a kernel version utility
 echo "Installing ukuu..."
 apt-add-repository -y ppa:teejee2008/ppa
