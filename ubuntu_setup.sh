@@ -5,18 +5,21 @@ if [[ $UID != 0 ]]; then
     exit 1
 fi
 echo "This program will set up your Ubuntu-based Linux environment, with an assortment of utilities you may otherwise not have on a Ubuntu default installation. This will take a few minutes as Ubuntu does it's silly thing, but we'll be back up and running before you know it. Press any key to get started."
-read -n 1 -s
-echo "First, let's get the latest updates and upgrades from the repo..."
-
-apt update && apt upgrade
-echo "Now, we can install some new programs."
-
+read -n 1 -s ## wait for keystroke to continue
+echo "First, we'll grab an essential utility, and update the repositories."
 ## Installer for ukuu, a kernel version utility
-echo "First, we're going to install ukuu, a kernel version utility."
+echo -n "Installing ukuu..."
 apt-add-repository -y ppa:teejee2008/ppa
 apt update
 apt install ukuu
-## Finished installing ukuu.
+apt update && apt upgrade
+## Finish ukuu
+echo " done."
+echo "Now, we can install some new programs."
+echo "Remember that when you install a new Linux kernel, you will have to reboot your system!!"
+echo "Press any key to continue."
+## Finished preloader stuff.
+read -n 1 -s ## wait for keystroke to continue
 
 echo "Next, we're going to install some essential programs."
 if ! [ -x "$(command -v neofetch)" ]; then ##   Neofetch, CLI utility to display system info
