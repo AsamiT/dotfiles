@@ -19,65 +19,65 @@ fi
 echo "Updating repository and upgrading packages..."
 apt-get -qq update && apt-get -qq upgrade ## Finished preloader stuff.
 
-echo "Now, we can install some new programs."
-echo "Remember that when you install a new Linux kernel, you will have to reboot your system!!"
-echo "Press any key to continue."
+printf "Now, we can install some new programs.\n"
+printf "Remember that when you install a new Linux kernel,\nyou will have to reboot your system!!"
+printf "\n\nPress any key to continue."
 read -n 1 -s ## wait for keystroke to continue
 
 echo "Next, we're going to install some essential programs."
 if ! [ -x "$(command -v neofetch)" ]; then ##   Neofetch, CLI utility to display system info
     echo "neofetch isn't installed. Let's fix that."
-    apt-get -qq install neofetch > /dev/null
+    apt-get -qq install neofetch
 fi
 if ! [ -x "$(command -v vlc)" ]; then ##    VLC, media player
     echo "VLC isn't installed. Let's fix that."
-    apt-get -qq install vlc > /dev/null
+    apt-get -qq install vlc
 fi
 if ! [ -x "$(command -v git)" ]; then ##    Git, for repository management
     echo "Git isn't installed. Let's fix that."
-    apt-get -qq install git > /dev/null
+    apt-get -qq install git
 fi
 if ! [ -x "$(command -v snap)" ]; then ##   Snap, Ubuntu's new package system.
     echo "You can't install snap packages right now. Let's fix that."
-    apt-get -qq install snapd-xdg-open > /dev/null
+    apt-get -qq install snapd-xdg-open
 fi
 if ! [ -x "$(command -v telegram-desktop)"]; then ##	Telegram, messaging service
     echo "Telegram isn't installed. Let's fix that."
-    apt-get -qq install telegram-desktop > /dev/null
+    apt-get -qq install telegram-desktop
 fi 
 if ! [ -x "$(command -v atom)"]; then ##	Atom, text editor
     echo "Atom isn't installed. Let's fix that."
     curl -sL https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
     echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list
-    apt-get -qq update > /dev/null
+    apt-get -qq update
     apt-get -qq install atom
 fi
 if ! [ -x "$(command -v geany)"]; then ##  	Geany
     echo "Geany isn't installed. Let's fix that."
-    apt-get -qq install geany > /dev/null
+    apt-get -qq install geany
 fi
 if ! [ -x "$(command -v emacs)"]; then ##  	Emacs
     echo "emacs isn't installed. Let's fix that."
-    apt-get -qq install emacs > /dev/null
+    apt-get -qq install emacs
 fi
 if ! [ -x "$(command -v pandoc)"]; then ##  	pandoc
     echo "pandoc isn't installed. Let's fix that."
-    apt-get -qq install pandoc > /dev/null
+    apt-get -qq install pandoc
 fi
 if ! [ -x "$(command -v ffmpeg)"]; then ##  	ffmpeg
     echo "ffmpeg isn't installed. Let's fix that."
-    apt-get -qq install ffmpeg youtube-dl > /dev/null
+    apt-get -qq install ffmpeg youtube-dl
 fi
 ##  Wine
 ##  DXVK
 ##  Steam
 if ! [ -x "$(command -v cmus)" ]; then ## cmus, CLI music player
     echo "cmus isn't installed. Let's fix that."
-    apt-get -qq install cmus > /dev/null
+    apt-get -qq install cmus
 fi
 if ! [ -x "$(command -v discord)" ]; then ## Discord, chat program
     echo "Discord isn't installed. Let's fix that."
-    snap install discord > /dev/null
+    snap install discord
 fi
 if ! [ -x "$(command -v zsh)" ]; then
     echo "You don't have zsh. Let's fix that."
