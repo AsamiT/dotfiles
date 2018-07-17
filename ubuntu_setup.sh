@@ -8,6 +8,7 @@ echo "This program will set up your Ubuntu-based Linux environment to your likin
 if ! [ -x "$(command -v neofetch)" ]; then
     echo "Neofetch isn't installed. Installing."
     apt install neofetch
+fi
 if ! [ -x "$(command -v vlc)" ]; then
     echo "VLC not installed. Installing..."
     apt install vlc
