@@ -1,6 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=/usr/local/sbin:$PATH:/Applications/Geany.app/Contents/MacOS
+export PATH=/usr/local/sbin:/usr/local/bin:$PATH:/Applications/Geany.app/Contents/MacOS
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/James/.oh-my-zsh
@@ -10,6 +10,7 @@ export FRTN=/usr/local/Cellar/fortune/9708/share/games/fortunes
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="sporty_256"
+#ZSH_THEME="theunraveler"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -60,7 +61,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 #alias lolcat='lolcat -p 1 -f'
-alias clear='clear && fortune | cowsay -t && echo " "'
+alias clear='clear && fortune && echo " "'
 clear
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -90,11 +91,10 @@ clear
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias ls='ls -Glh'
-alias ls-ext='ls -Ca'
+alias ls='ls -Glhs'
 alias gorepo='cd ~/Git\ Repos'
 alias cls='clear'
-alias neofetch='neofetch --color_blocks on --install_time on'
+alias neofetch='neofetch --color_blocks on --install_time on --ascii_distro freebsd'
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
@@ -103,4 +103,8 @@ alias fgrep='fgrep --color=auto'
 alias psh='zsh ~/.scripts/push.sh'
 alias pll='zsh ~/.scripts/pull.sh'
 alias docexport='zsh ~/.scripts/docxport.sh $1'
+alias md_xport='zsh ~/.scripts/markdown.sh $1'
 alias mp3='ncmpcpp'
+alias go-xv6='vagrant ssh'
+alias wttr_home='curl wttr.in/~2109+West+Sewaha+Street'
+alias wttr_fpu='curl wttr.in/~Florida+Polytechnic+University'
